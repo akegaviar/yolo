@@ -10,91 +10,82 @@
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Press Start 2P', cursive;
-            background-color: #2e2e2e;
-            color: #fff;
-            padding: 20px;
+    body {
+        font-family: 'Press Start 2P', cursive;
+        background-color: #2e2e2e;
+        color: #fff;
+        padding: 20px;
+    }
+    
+    a {
+        color: #9dff00;
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    img {
+        vertical-align: bottom;
+        margin-right: 0px;
+        height: 50px;
+    }
+    
+    img.hello-img {
+        height: 1.5em;
+        width: auto;
+        margin-left: 3px;
+        vertical-align: top;
+    }
+    
+    .position {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+    
+    @keyframes fall {
+        0% {
+            top: -50px;
         }
-
-        a {
-            color: #9dff00;
-            text-decoration: none;
+        100% {
+            top: 100%;
         }
-
-        ul {
-            list-style-type: none;
-        }
-
-        img {
-            vertical-align: bottom;
-            margin-right: 0px;
-            height: 50px;
-        }
-
-        img.hello-img {
-            height: 1.5em;
-            width: auto;
-            margin-left: 3px;
-            vertical-align: top;
-        }
-
-        .position {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: -10px;
-            margin-bottom: 20px;
-        }
-
-        @keyframes fall {
-            0% {
-                top: -50px;
-            }
-            100% {
-                top: 100%;
-            }
-        }
+    }
     </style>
 </head>
 
 <body>
     <header>
-        <h1 class="nes-text is-success">Ake<img class="hello-img" src="https://github.com/akegaviar/fren/blob/0738a0a964b8f919f6fab0578318a4beab725482/henlo.png?raw=true" alt="Hello Image"></h1>
-    </header>
-
+        <h1 class="nes-text is-success">Ake<img class="hello-img" src="https://github.com/akegaviar/fren/blob/0738a0a964b8f919f6fab0578318a4beab725482/henlo.png?raw=true" alt="Hello Image"></h1> </header>
     <section>
         <h2 class="nes-text is-primary position">Developer Experience Director @ <a href="https://chainstack.com/" target="_blank">Chainstack</a></h2>
+        <p style="font-size: 12px; color: pink; margin-top: 20px">My free time is Web3. My full time is Web3. This has been true for the past 6 years.</p>
+        <p style="font-size: 12px; color: pink; margin-top: 20px">Btw my legal name is Evgeny Konstantinov.</p>
     </section>
-
     <section>
         <ul>
-            <li>
-                <img src="https://raw.githubusercontent.com/akegaviar/yolo/a74fc7c4793d93b7f81fdf2391c061c83032b281/warpcast.png" alt="Warpcast logo">
-                <a href="https://warpcast.com/ake" target="_blank">Warpcast</a>
-            </li>
-            <li>
-                <i class="nes-icon twitter is-medium"></i>
-                <a href="https://twitter.com/akegaviar" target="_blank">Twitter</a>
-            </li>
-            <li>
-                <i class="nes-icon github is-medium"></i>
-                <a href="https://github.com/akegaviar" target="_blank">GitHub</a>
-            </li>
-            <li>
-                <i class="nes-icon linkedin is-medium"></i>
-                <a href="https://www.linkedin.com/in/ake" target="_blank">LinkedIn</a>
-</li>
-</ul>
-</section>
-<div id="rain"></div>
-<section style="display: flex; justify-content: center;">
-    <button id="makeItRainButton" class="nes-btn is-primary">Make It Rain</button>
-</section>
-
-<script>
+            <li> <img src="https://raw.githubusercontent.com/akegaviar/yolo/a74fc7c4793d93b7f81fdf2391c061c83032b281/warpcast.png" alt="Warpcast logo"> <a href="https://warpcast.com/ake" target="_blank">Warpcast</a> </li>
+            <li> <i class="nes-icon twitter is-medium"></i> <a href="https://twitter.com/akegaviar" target="_blank">Twitter</a> </li>
+            <li> <i class="nes-icon github is-medium"></i> <a href="https://github.com/akegaviar" target="_blank">GitHub</a> </li>
+            <li> <i class="nes-icon linkedin is-medium"></i> <a href="https://www.linkedin.com/in/ake" target="_blank">LinkedIn</a> </li>
+            <li style="font-size: 12px; color: purple; margin-top: 20px">DMs are always open.</li>
+        </ul>
+    </section>
+    <div id="rain"></div>
+    <section style="display: flex; justify-content: center; margin-top: 60px;">
+        <button id="makeItRainButton" class="nes-btn is-primary">Make It Rain</button>
+    </section>
+    <p style="color: #fff; margin-top: 60px;">I like tinkering with stuff.</p>
+    <p>Like being the first to figure out whether the Ethereum mainnet nodes are <a href="https://chainstack.com/the-ethereum-cloud-vs-on-premises-nodes-conundrum/" target="_blank">running on-prem or on cloud providers.</a></p>
+    <p>Or finding a way to quantify the <a href="https://chainstack.com/wp-content/uploads/2020/01/Enterprise-Blockchain-Protocols-Evolution-Index-2020.pdf" target="_blank">Enterprise blockchain adoption.</a></p>
+    <p>Or trying to guess what <a href="https://chainstack.com/wp-content/uploads/2021/02/Eth2_Client_Development_Report_2021_Chainstack.pdff" target="_blank">Eth2 client will be the most adopted at launch</a> (long before The Merge).</p>
+    <p>And tons of other stuff.</p>
+    <script>
     const rainElement = document.getElementById("rain");
     const makeItRainButton = document.getElementById("makeItRainButton");
-
     makeItRainButton.addEventListener("click", function() {
         createRain();
     });
@@ -107,16 +98,15 @@
             img.style.left = Math.random() * window.innerWidth + "px";
             img.style.animation = "fall 5s linear infinite";
             rainElement.appendChild(img);
-
             setTimeout(function() {
                 rainElement.removeChild(img);
             }, 5000);
         }, 300);
-
         setTimeout(function() {
             clearInterval(interval);
         }, 5000);
     }
-</script>
+    </script>
 </body>
+
 </html>
