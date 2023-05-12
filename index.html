@@ -83,34 +83,40 @@
             <li>
                 <i class="nes-icon linkedin is-medium"></i>
                 <a href="https://www.linkedin.com/in/ake" target="_blank">LinkedIn</a>
-            </li>
-        </ul>
-    </section>
-    <div id="rain"></div>
+</li>
+</ul>
+</section>
+<div id="rain"></div>
+<section style="display: flex; justify-content: center;">
+    <button id="makeItRainButton" class="nes-btn is-primary">Make It Rain</button>
+</section>
 
-    <script>
-        const helloImg = document.querySelector(".hello-img");
-        const rainElement = document.getElementById("rain");
+<script>
+    const rainElement = document.getElementById("rain");
+    const makeItRainButton = document.getElementById("makeItRainButton");
 
-        helloImg.addEventListener("click", function() {
-            const interval = setInterval(function() {
-                const img = document.createElement("img");
-                img.src = "https://github.com/akegaviar/yolo/blob/6a4f2cd4564b4ed31ececd9bf991322f21c8a91f/chainstack.png?raw=true";
-                img.style.position = "absolute";
-                img.style.left = Math.random() * window.innerWidth + "px";
-                img.style.animation = "fall 5s linear infinite";
-                rainElement.appendChild(img);
+    makeItRainButton.addEventListener("click", function() {
+        createRain();
+    });
 
-                setTimeout(function() {
-                    rainElement.removeChild(img);
-                }, 5000);
-            }, 300);
+    function createRain() {
+        const interval = setInterval(function() {
+            const img = document.createElement("img");
+            img.src = "https://github.com/akegaviar/yolo/blob/6a4f2cd4564b4ed31ececd9bf991322f21c8a91f/chainstack.png?raw=true";
+            img.style.position = "absolute";
+            img.style.left = Math.random() * window.innerWidth + "px";
+            img.style.animation = "fall 5s linear infinite";
+            rainElement.appendChild(img);
 
             setTimeout(function() {
-                clearInterval(interval);
+                rainElement.removeChild(img);
             }, 5000);
-        });
-    </script>
-</body>
+        }, 300);
 
+        setTimeout(function() {
+            clearInterval(interval);
+        }, 5000);
+    }
+</script>
+</body>
 </html>
