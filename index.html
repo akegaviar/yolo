@@ -76,7 +76,7 @@
     </section>
     <div id="rain"></div>
     <section style="display: flex; justify-content: center; margin-top: 60px;">
-        <button id="makeItRainButton" class="nes-btn is-primary">Make It Rain</button>
+        <button id="makeItRainButton" class="nes-btn is-primary" style="position: relative; z-index: 1;">Make It Rain</button>
     </section>
     <p style="color: #fff; margin-top: 60px;">I like tinkering with stuff.</p>
     <p>Like being the first to figure out whether the Ethereum mainnet nodes are <a href="https://chainstack.com/the-ethereum-cloud-vs-on-premises-nodes-conundrum/" target="_blank">running on-prem or on cloud providers.</a></p>
@@ -97,6 +97,7 @@
             img.style.position = "absolute";
             img.style.left = Math.random() * window.innerWidth + "px";
             img.style.animation = "fall 5s linear infinite";
+            img.style.zIndex = "2"; // Add this
             rainElement.appendChild(img);
             setTimeout(function() {
                 rainElement.removeChild(img);
