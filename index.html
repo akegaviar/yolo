@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +38,19 @@
         vertical-align: top;
     }
     
+    .custom-list {
+        list-style-type: none;  /* Removes default bullet points */
+        padding-left: 1em;  /* Adds some left padding to align text */
+    }
+
+    .custom-list li::before {
+        content: "•";
+        color: purple;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
     .position {
         font-size: 18px;
         font-weight: bold;
@@ -84,8 +96,10 @@
     <p>Or trying to guess what <a href="https://chainstack.com/wp-content/uploads/2021/02/Eth2_Client_Development_Report_2021_Chainstack.pdf" target="_blank">Eth2 client will be the most adopted at launch</a> (long before The Merge).</p>
     <p>And tons of other stuff.</p>
     <p>Also, check out:
-        <ul><li><a href="https://issues.mg" target="_blank">Issues GM 🌞</a> — latest Web3 issues that you can contribute to.</li>
-        <li><a href="https://fafo.show" target="_blank">FAFO & Chill 💙🛠</a> — a chill Developer Experience podcast on Web3 stuff we do @ Chainstack.</li></ul>
+        <ul class="custom-list">
+        <li><a href="https://issues.mg" target="_blank">Issues GM 🌞</a> — latest Web3 issues.</li>
+        <li><a href="https://fafo.show" target="_blank">FAFO & Chill 💙🛠</a> — a chill DevX podcast on Web3.</li>
+       <li><a href="https://scrollthroughtime.eth.limo" target="_blank">Scroll through Time ⏳</a> — Web1>2>3 history scroll.</li></ul>
     <script>
     const rainElement = document.getElementById("rain");
     const makeItRainButton = document.getElementById("makeItRainButton");
@@ -112,5 +126,4 @@
     }
     </script>
 </body>
-
 </html>
